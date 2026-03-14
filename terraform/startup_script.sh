@@ -1,0 +1,1 @@
+# installs + configures Wireguard on EC2 boot
