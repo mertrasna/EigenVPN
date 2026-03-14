@@ -1,0 +1,1 @@
+data "aws_caller_identity" "current" {} # aws user identity 
