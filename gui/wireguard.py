@@ -1,0 +1,1 @@
+# generates keys, builds config, calls wg-quick
