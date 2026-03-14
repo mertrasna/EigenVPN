@@ -16,3 +16,14 @@ variable "aws_secret_key" {
   type        = string
   sensitive   = true
 }
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type = string
+  default = "t2.micro"
+}
+
+variable "client_public_key" {
+  description = "WireGuard public key of the client"
+  type = string
+}
