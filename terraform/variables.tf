@@ -19,11 +19,17 @@ variable "aws_secret_key" {
 
 variable "instance_type" {
   description = "EC2 instance type"
-  type = string
-  default = "t2.micro"
+  type        = string
+  default     = "t2.micro"
 }
 
 variable "client_public_key" {
   description = "WireGuard public key of the client"
-  type = string
+  type        = string
+}
+
+variable "ami" {
+  description = "EC2 AMI ID - Ubuntu 22.04 eu-central-1"
+  type        = string
+  default     = "ami-0084a47cc718c111a"
 }
