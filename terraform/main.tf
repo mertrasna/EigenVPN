@@ -39,3 +39,17 @@ resource "aws_instance" "eigenvpn" {
     Name = "Eigen VPN"
   }
 }
+
+resource "aws_eip" "eigenvpn" { # Elastic IP 
+  domain = "vpc"
+
+  tags = {
+    Name = "EigenVPN"
+  }
+}
+
+resource "aws_eip_association" "eigenvpn" { # links EIP to the EC2 instance 
+  instance_id   = aws_instance.eigenvpn.id
+  allocation_id = aws_eip.eigenvpn.id
+}
+
