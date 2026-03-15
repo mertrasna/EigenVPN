@@ -9,9 +9,9 @@ wg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/s
 chmod 600 /etc/wireguard/server_private.key
 
 # Store priv key in variable
-SERVER_PRIVATE_KEY=$(cat /etc/wireguard/server_private.key) # runs everything as a command first to let us save 
+SERVER_PRIVATE_KEY=$(cat /etc/wireguard/server_private.key) 
 
-cat > /etc/wireguard/wg0.conf << EOF # herodoc for keys
+cat > /etc/wireguard/wg0.conf << EOF 
 [Interface]
 PrivateKey = $SERVER_PRIVATE_KEY
 Address = 10.0.0.1/24
